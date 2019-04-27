@@ -1,0 +1,19 @@
+@media (min-width: 992px){
+	.navbar-expand-lg .navbar-collapse {
+		justify-content: flex-end;
+	}
+}
+
+.navbar-fixed-top{
+	position: fixed;
+	top: 0;
+	width: 100%;	
+}
+
+#sticky-navbar{
+	-webkit-transition: background-color 200ms ease-in;
+	-moz-transition: background-color 200ms ease-in;
+	-ms-transition: background-color 200ms ease-in;
+	-o-transition: background-color 200ms ease-in;
+	transition: background-color 200ms ease-in;
+}
