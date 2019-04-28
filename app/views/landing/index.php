@@ -40,7 +40,7 @@
 				<a href="#">
 					<div class="feature-card">
 						<h3 class="feature-card-title">belajar</h3>
-						<img src="img/1.jpg" style="img-fluid" alt="">
+						<img src="<?php echo base_url('img/1.jpg') ?>" style="img-fluid" alt="">
 					</div>
 				</a>
 			</div>
@@ -48,7 +48,7 @@
 				<a href="#">
 					<div class="feature-card">
 						<h3 class="feature-card-title">jual/beli</h3>
-						<img src="img/2.jpg" style="img-fluid" alt="">
+						<img src="<?php echo base_url('img/2.jpg') ?>" style="img-fluid" alt="">
 					</div>
 				</a>
 			</div>
@@ -56,7 +56,7 @@
 				<a href="#">
 					<div class="feature-card">
 						<h3 class="feature-card-title">diskusi</h3>
-						<img src="img/3.jpg" style="img-fluid" alt="">
+						<img src="<?php echo base_url('img/3.jpg') ?>" style="img-fluid" alt="">
 					</div>
 				</a>
 			</div>
@@ -64,7 +64,7 @@
 				<a href="#">
 					<div class="feature-card">
 						<h3 class="feature-card-title">tips n trik</h3>
-						<img src="img/4.jpg" style="img-fluid" alt="">
+						<img src="<?php echo base_url('img/4.jpg') ?>" style="img-fluid" alt="">
 					</div>
 				</a>
 			</div>
