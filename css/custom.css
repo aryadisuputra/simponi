@@ -1,5 +1,10 @@
 body{
+	font-family: 'Lora', serif;
+}
+
+h1,h2,h3,h4,h5,h6{
 	font-family: 'Poppins', sans-serif;
+
 }
 @media (min-width: 992px){
 	.navbar-expand-lg .navbar-collapse {
@@ -9,6 +14,7 @@ body{
 
 .navbar{
 	padding: 20px 40px;
+	
 }
 
 .navbar-brand img{
@@ -77,6 +83,7 @@ section{
 .feature-card:hover:before{
 	opacity: 0.8;
 }
+
 .feature-card::before{
 	content: " ";
 	display: block;
@@ -103,7 +110,22 @@ section{
 	color: #ffffff;
 	z-index: 2;	
 	width: 100%;
-	font-weight: 400;
 	padding: 0 10px;
+}
+
+.title{
+	text-align: center;
+	position: relative;
+}
+
+.title::after{
+    content: " ";
+    width: 50px;
+    height: 5px;
+    background-color: #4a8500;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
