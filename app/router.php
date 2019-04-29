@@ -16,4 +16,7 @@ Yang ini routes default
 
 */
 
-$routes['default'] = 'Landing@index';
+$routes['default'] = 'LandingController@index';
+$routes['control-panel'] = 'AdminController@index';
+$routes['login'] = 'AdminController@login';
+$routes['dologin'] = 'AdminController@doLogin';
