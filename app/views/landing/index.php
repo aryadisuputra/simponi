@@ -75,4 +75,8 @@
 	<h1 class="title">Berita</h1>
 </section>
 
+<section id="footer">
+	Copyright ®2019
+</section>
+
 <?php view('partial/header') ?>

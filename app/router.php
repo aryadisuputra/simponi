@@ -16,7 +16,11 @@ Yang ini routes default
 
 */
 
-$routes['default'] = 'Landing@index';
+
 $routes['why-simponi'] = function(){
 	view('landing/whysimponi');
 };
+$routes['default'] = 'LandingController@index';
+$routes['control-panel'] = 'AdminController@index';
+$routes['login'] = 'AdminController@login';
+$routes['dologin'] = 'AdminController@doLogin';
