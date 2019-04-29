@@ -17,3 +17,6 @@ Yang ini routes default
 */
 
 $routes['default'] = 'Landing@index';
+$routes['why-simponi'] = function(){
+	view('landing/whysimponi');
+};
