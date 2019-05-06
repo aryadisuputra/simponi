@@ -10,3 +10,5 @@
 	<link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
 </head>
 <body>
+
+<?php view('partial/navbar') ?>
