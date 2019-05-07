@@ -8,7 +8,9 @@ if(!function_exists('load')){
 
 if(!function_exists('model')){
 	function model($str){
-		require BASE_PATH.'app/models/'.ucfirst($str).'.php';
+		$model = ucfirst($str);
+		require BASE_PATH.'app/models/'.$model.'.php';
+		return new $model();
 	}
 }
 
@@ -92,6 +94,23 @@ if(!function_exists('paginate')){
 			return $start.$mid.$end;
 		}else{
 			return NULL;
+		}
+	}
+}
+
+if(!function_exists('checkIfNotLogin')){
+	function checkIfNotLogin(){
+		if(Session::sess('login') === false || Session::sess('login') === null){
+			msg('Anda harus login terlebih dahulu', 'warning');
+			redirect('login');
+		}
+	}
+}
+
+if(!function_exists('checkIfLogin')){
+	function checkIfLogin(){
+		if(Session::sess('login') === true){
+			redirect('control-panel');
 		}
 	}
 }

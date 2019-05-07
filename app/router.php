@@ -22,5 +22,6 @@ $routes['why-simponi'] = function(){
 };
 $routes['default'] = 'LandingController@index';
 $routes['control-panel'] = 'AdminController@index';
-$routes['login'] = 'AdminController@login';
-$routes['dologin'] = 'AdminController@doLogin';
+$routes['login'] = 'LandingController@login';
+$routes['dologin'] = 'LandingController@doLogin';
+$routes['logout'] = 'AdminController@logout';
