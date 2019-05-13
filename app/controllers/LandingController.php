@@ -2,6 +2,7 @@
 class LandingController
 {
 	private $akun;
+
 	function __construct()
 	{
 		$this->akun = model('akun');
@@ -30,7 +31,7 @@ class LandingController
 
 		$config = [
 			'username' => [
-				'required' => true,
+				'required' => true
 			],
 			'password' => [
 				'required' => true
@@ -38,6 +39,7 @@ class LandingController
 		];
 
 		$valid = new Validation($config);
+
 		if($valid->run()){
 			if($this->akun->login($user, $pass)){
 				Session::sess('login', true);

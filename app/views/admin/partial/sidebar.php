@@ -1,8 +1,10 @@
 <section class="sidebar">
   	<ul class="sidebar-menu" data-widget="tree">
 		<li class="header">HEADER</li>
-		<li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
-		<li><a href="#"><i class="fa fa-book"></i> <span>Edukasi</span></a></li>
+        <?php $url = 'control-panel/' ?>
+		<li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === null) ? 'class="active"' : '' ?>><a href="<?php echo base_url($url);  ?>"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
+		<li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'edukasi') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'edukasi') ?>"><i class="fa fa-book"></i> <span>Edukasi</span></a></li>
+        <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'pengguna') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'pengguna') ?>"><i class="fa fa-users"></i> <span>Pengguna</span></a></li>
 		<!-- <li class="treeview">
 	  		<a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
 				<span class="pull-right-container">

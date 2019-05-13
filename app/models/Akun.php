@@ -1,7 +1,6 @@
 <?php 
 class Akun{
 	function login($user, $pass){
-
 		try {
 			$sql = "SELECT * FROM akun WHERE username = ? AND password = ?";
 

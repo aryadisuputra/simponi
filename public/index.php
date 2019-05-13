@@ -1,4 +1,7 @@
-<?php 
+<?php
+// warning
+// experimental, jangan diedit
+// hanya orang expert yang boleh edit
 
 // error_reporting(0);
 // ini_set('display_errors', 'Off');
@@ -10,8 +13,7 @@ date_default_timezone_set("Asia/Makassar");
 require_once BASE_PATH.'app/init.php';
 
 require_once BASE_PATH.'app/router.php';
-
-$urls = trim(filter_var(str_replace(str_replace('index.php',  '', $_SERVER['SCRIPT_NAME']), '', $_SERVER['REQUEST_URI']), FILTER_SANITIZE_URL), "/");
+$urls = trim(filter_var(str_replace($_SERVER['SCRIPT_NAME'], '', $_SERVER['PHP_SELF']), FILTER_SANITIZE_URL), "/");
 
 if(empty($urls)){
 	$route_check = $routes['default'];

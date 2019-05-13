@@ -18,10 +18,16 @@ Yang ini routes default
 
 
 $routes['why-simponi'] = function(){
-	view('landing/whysimponi');
+	return view('landing/whysimponi');
 };
 $routes['default'] = 'LandingController@index';
-$routes['control-panel'] = 'AdminController@index';
+
+// control panel
+$routes['control-panel'] = 'DashboardController@index';
+$routes['control-panel/edukasi'] = 'EdukasiController@index';
+$routes['control-panel/pengguna'] = 'PenggunaController@index';
+
+// autentikasi
 $routes['login'] = 'LandingController@login';
 $routes['dologin'] = 'LandingController@doLogin';
-$routes['logout'] = 'AdminController@logout';
+$routes['logout'] = 'DashboardController@logout';

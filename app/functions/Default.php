@@ -17,7 +17,7 @@ if(!function_exists('model')){
 if(!function_exists('view')){
 	function view($str, $data = []){
 		extract($data);
-		require BASE_PATH.'app/views/'.$str.'.php';
+		return require BASE_PATH.'app/views/'.$str.'.php';
 	}
 }
 
@@ -80,7 +80,9 @@ if(!function_exists('paginate')){
 		$p     = Input::get('p');
 		$hal   = empty(Input::get('hal')) ? 1 : Input::get('hal');
 
-		for ($i=1; $i <= $total; $i++) {
+		$startnum = $total - 3;
+
+		for ($i=1; $i <= $startnum; $i++) {
 			if($hal == $i ){
 				$class = 'class="active"';
 			}else{
@@ -88,6 +90,7 @@ if(!function_exists('paginate')){
 			}
 			$mid .= '<li><a '.$class.' href="?p='.$p.'&hal='.$i.'">'.$i.'</a></li>';
 		}
+
 		$end   = '</ul></center>';
 
 		if(empty(Input::get('search'))){

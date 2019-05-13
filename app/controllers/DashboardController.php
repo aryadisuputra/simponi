@@ -1,6 +1,6 @@
 <?php 
 
-class AdminController
+class DashboardController
 {
 	private $akun;
 
@@ -15,7 +15,8 @@ class AdminController
 		$data = [
 			'title' => 'Dashboard'
 		];
-		return view('admin/dashboard/index');
+
+		return view('admin/dashboard/index', $data);
 	}
 
 	public function logout(){

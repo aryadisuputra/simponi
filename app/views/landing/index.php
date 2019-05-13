@@ -48,4 +48,4 @@
 	Copyright ®2019
 </section>
 
-<?php view('partial/header') ?>
+<?php view('partial/footer') ?>
