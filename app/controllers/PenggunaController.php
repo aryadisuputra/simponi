@@ -2,9 +2,11 @@
 
 class PenggunaController
 {
+    private $akun;
     function __construct()
     {
         checkIfNotLogin();
+        $this->akun = model('akun');
     }
 
     public function index(){
@@ -44,6 +46,51 @@ class PenggunaController
         ];
 
         return view('admin/pengguna/index', $data);
+    }
+
+    function add(){
+        $data = [
+            'title' => 'Tambah Pengguna'
+        ];
+
+        return view('admin/pengguna/add', $data);
+    }
+
+    function create(){
+         $config = [
+            'nama_depan' => [
+                'required' => true
+            ],
+            'nama_belakang' => [
+                'required' => true
+            ],
+            'jenis_kelamin' => [
+                'required' => true
+            ],
+            'tgl_lahir' => [
+                'required' => true
+            ],
+            'email' => [
+                'required' => true
+            ],
+            'username' => [
+                'required' => true
+            ],
+            'password' => [
+                'required' => true
+            ],
+        ];
+
+        $valid = new Validation($config);
+
+        if($valid->run()){
+            $this->akun->tambah();
+
+            redirect('control-panel/pengguna/add');
+        }else{
+            msg($valid->getErrors(), 'danger');
+            redirect('control-panel/pengguna/add');
+        }
     }
 
 }

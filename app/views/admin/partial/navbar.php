@@ -37,7 +37,7 @@
 					</a>
 					<ul class="dropdown-menu">
 				  		<li class="user-header">
-							<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							<img src="<?php echo base_url('dist/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
 							<p>
 								Agus Wahyu
 								<small>Admin</small>

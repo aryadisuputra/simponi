@@ -22,10 +22,16 @@ $routes['why-simponi'] = function(){
 };
 $routes['default'] = 'LandingController@index';
 
-// control panel
+// dashboard
 $routes['control-panel'] = 'DashboardController@index';
+
+// edukasi
 $routes['control-panel/edukasi'] = 'EdukasiController@index';
+
+// pengguna
 $routes['control-panel/pengguna'] = 'PenggunaController@index';
+$routes['control-panel/pengguna/add'] = 'PenggunaController@add';
+$routes['control-panel/pengguna/create'] = 'PenggunaController@create';
 
 // autentikasi
 $routes['login'] = 'LandingController@login';
