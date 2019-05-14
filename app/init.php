@@ -5,4 +5,4 @@ spl_autoload_register(function($str){
 	require_once BASE_PATH.'app/functions/'.$str.'.php';
 });
 
-DB::getInstance('localhost', 'root', 'root', 'simponi');
+DB::getInstance('localhost', 'root', '', 'simponi');

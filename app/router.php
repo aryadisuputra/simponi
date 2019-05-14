@@ -26,8 +26,11 @@ $routes['default'] = 'LandingController@index';
 $routes['control-panel'] = 'DashboardController@index';
 $routes['control-panel/edukasi'] = 'EdukasiController@index';
 $routes['control-panel/pengguna'] = 'PenggunaController@index';
-
+$routes['control-panel/kategori-edukasi'] = 'KategoriEdukasiController@index';
+$routes['control-panel/kategori-produk'] = 'KategoriProdukController@index';
+$routes['control-panel/produk'] = 'ProdukController@index';
 // autentikasi
 $routes['login'] = 'LandingController@login';
 $routes['dologin'] = 'LandingController@doLogin';
 $routes['logout'] = 'DashboardController@logout';
+
