@@ -139,14 +139,14 @@ class Table{
 
             $this->table .= '<tbody>';
             if($this->totalData > 0) {
-                foreach ($this->datas as $data) {
+                foreach ($this->datas as $index => $data) {
                     $this->table .= '<tr>';
                     foreach ($this->rows as $key => $row) {
                         $this->table .= '<td>';
                         if (is_string($row[1])) {
                             $this->table .= $data[$row[1]];
                         } else {
-                            $this->table .= call_user_func_array($row[1], [$data, $key]);
+                            $this->table .= call_user_func_array($row[1], [$data, $index]);
                         }
                         $this->table .= '</td>';
                     }
