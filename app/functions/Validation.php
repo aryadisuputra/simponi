@@ -28,6 +28,11 @@ class Validation
 							array_push($this->errors, $key.' harus di isi');
 						}
 						break;
+                    case 'email':
+                        if(!filter_var(Input::post($key), FILTER_VALIDATE_EMAIL)){
+                            array_push($this->errors, $key.' harus menggunakan email valid');
+                        }
+                        break;
 					default:
 						break;
 				}
@@ -40,7 +45,15 @@ class Validation
 	public function run(){
 		if(count($this->errors) > 0) 
 			return false;
-		else return true;
+		else {
+		    foreach ($_SESSION as $key => $value){
+		        $check = strtolower($key);
+		        if(strpos($check, '_old_')){
+                    unset($_SESSION[$key]);
+                }
+            }
+		    return true;
+		};
 	}
 
 

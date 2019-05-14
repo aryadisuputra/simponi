@@ -12,6 +12,12 @@ date_default_timezone_set("Asia/Makassar");
 
 require_once BASE_PATH.'app/init.php';
 
+if(strtolower($_SERVER['REQUEST_METHOD']) === 'post'){
+    foreach ($_POST as $key => $value){
+        Session::flash('old_'.$key, $value);
+    }
+}
+
 require_once BASE_PATH.'app/router.php';
 $urls = trim(filter_var(str_replace($_SERVER['SCRIPT_NAME'], '', $_SERVER['PHP_SELF']), FILTER_SANITIZE_URL), "/");
 
@@ -85,3 +91,4 @@ foreach ($routes as $route_key => $route_values) {
 if($found == 0){
 	view('404');
 }
+

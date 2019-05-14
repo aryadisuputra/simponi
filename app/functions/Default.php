@@ -23,7 +23,7 @@ if(!function_exists('view')){
 
 if(!function_exists('redirect')){
 	function redirect($str){
-		header('location: '.$str);
+		header('location: '.base_url($str)) ;
 	}
 }
 
@@ -116,4 +116,11 @@ if(!function_exists('checkIfLogin')){
 			redirect('control-panel');
 		}
 	}
+}
+
+if(!function_exists('old')){
+    function old($name){
+        $session = Session::flash('old_'.$name);
+        return $session;
+    }
 }
