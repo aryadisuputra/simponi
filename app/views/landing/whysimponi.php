@@ -1,4 +1,4 @@
-<?php view('partial/header') ?>
+<?php view('partial/header', $data) ?>
 
 <div class="section">
 	<div class="feature-card">

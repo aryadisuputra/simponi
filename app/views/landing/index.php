@@ -1,4 +1,4 @@
-<?php view('partial/header') ?>
+<?php view('partial/header', $data) ?>
 <section id="hero" class="no-pad">
 	<a href="#" class="btn btn-primary btn-sign-up content-center">lihat cara kerja</a>
 </section>
