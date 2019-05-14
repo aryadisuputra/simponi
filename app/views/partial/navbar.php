@@ -14,7 +14,7 @@
 					<a class="nav-link" href="#">cara kerja</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">kenapa simponi?</a>
+					<a class="nav-link" href="<?php echo base_url('why-simponi') ?>">kenapa simponi?</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">produk kami</a>
