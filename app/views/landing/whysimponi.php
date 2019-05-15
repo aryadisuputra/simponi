@@ -38,7 +38,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="bottom-card">
-					<img class="img-fluid" src="<?php echo base_url('img/IndoorGardening.jpg') ?> " alt="">
+					<div class="card-container">
+						<img class="img-fluid" src="<?php echo base_url('img/IndoorGardening.jpg') ?> " alt="">
+					</div>
 					<h1>Top Benefits Of Indoor Gardening</h1>
 					<p>Growing a plant fills you with a great sense of peace. Especially when you are planting indoors, you can get a variety of vegetable plants at . . .</p>
 					<a href="#"><span>LANJUTKAN MEMBACA</span></a>
@@ -46,7 +48,9 @@
 			</div>
 			<div class="col-md-4">
 				<div class="bottom-card">
-					<img class="img-fluid" src="<?php echo base_url('img/vegetables_fruits.jpg') ?> " alt="">
+					<div class="card-container">
+						<img class="img-fluid" src="<?php echo base_url('img/vegetables_fruits.jpg') ?> " alt="">
+					</div>
 					<h1>Top 5 Vegetables And Fruits</h1>
 					<p>Hydroponics is the best way to grow organic vegetables in your own garden. Indoor plants not only beautify our personal space but . . .</p>
 					<a href="#"><span>LANJUTKAN MEMBACA</span></a>
@@ -54,7 +58,9 @@
 			</div>
 			<div class="col-md-4">
 				<div class="bottom-card">
-					<img class="img-fluid" src="<?php echo base_url('img/IndoorGardening.jpg') ?> " alt="">
+					<div class="card-container">
+						<img class="img-fluid" src="<?php echo base_url('img/IndoorGardening.jpg') ?> " alt="">
+					</div>
 					<h1>Hydroponics Guide</h1>
 					<p>Hydroponics is the branch of agriculture, which has advanced considerably quickly in the past few decades. Last year, Canada had set up ...</p>
 					<a href="#"><span>LANJUTKAN MEMBACA</span></a>

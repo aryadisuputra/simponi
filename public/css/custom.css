@@ -157,8 +157,23 @@ section{
 	font-size: 30px;
 }
 
+.bottom-card{
+	overflow: hidden;
+	position: relative;
+}
+
+.card-container{
+ 	height: 200px;
+ 	overflow: hidden;
+ 	margin-bottom: 20px;
+}
+
 .bottom-card img{
-	margin-bottom: 20px;
+	transition: all 0.3s;
+}
+
+.bottom-card img:hover{
+	transform: scale(1.1)
 }
 
 .bottom-card h1{
@@ -174,7 +189,7 @@ section{
 
 .bottom-card span:hover{
 	color: #03ad23;
-	font-family: 'Poppins', sans-serif;
+	/*font-family: 'Poppins', sans-serif;*/
 }
 
 .bottom-card a{
