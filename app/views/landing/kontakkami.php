@@ -19,7 +19,8 @@
 			  	</div>
 			  	<div class="form-group">
 				    <label for="exampleInputEmail1">Kritik dan Saran</label>
-				    <input type="text" class="form-control" id="exampleInputPesan" aria-describedby="kritikPengunjung" placeholder="Masukan Pesan" style="height: 10rem;">
+				    <!-- <input type="text" class="form-control" id="exampleInputPesan" aria-describedby="kritikPengunjung" placeholder="Masukan Pesan" style="height: 10rem;"> -->
+				    <textarea class="form-control" name="text" id=""style="height: 10rem" placeholder="Masukkan Pesan"></textarea>
 			  	</div>
 			  	<button type="button" class="btn btn-success">Kirim</button>
 			</form>
@@ -44,3 +45,7 @@
 	</div>
   </div>
 </div>
+<section id="footer">
+    <center style="color: #ffffff">simponi. dibuat dengan <span style="color: #ff7066">❤</span> oleh kelompok 5</center>
+</section>
+<?php view('partial/footer', $data) ?>
