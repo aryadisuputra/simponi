@@ -23,7 +23,7 @@
 					<a class="nav-link" href="#">blog</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">kontak kami</a>
+					<a class="nav-link" href="<?php echo base_url('contact-us') ?>">kontak kami</a>
 				</li>
 			</ul>
 		</div>

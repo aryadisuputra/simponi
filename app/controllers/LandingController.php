@@ -18,6 +18,12 @@ class LandingController
         ];
 	    return view('landing/whysimponi', $data);
     }
+    function kontak(){
+    	$data = [
+    		'title' => 'Kontak Kami'
+    	];
+    	return view('landing/kontakkami', $data);
+    }
 
 
 
