@@ -14,7 +14,8 @@ class PenggunaController
         $tabel = new Table([
             'query' => [
                 'sql' => 'SELECT * FROM akun'
-            ]
+            ],
+            'max' => 1
         ]);
         $tabel->addRow('No', function ($data, $index){
                 return $index+1;

@@ -20,6 +20,8 @@ Yang ini routes default
 
 $routes['default'] = 'LandingController@index';
 $routes['why-simponi'] = 'LandingController@whysimponi';
+$routes['contact-us'] = 'LandingController@kontak';
+$routes['edukasi'] = 'LandingController@edukasi';
 
 // dashboard
 $routes['control-panel'] = 'DashboardController@index';

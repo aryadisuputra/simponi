@@ -135,28 +135,81 @@ section{
 
 .font-bw{
 	font-family: 'Pacifico', cursive;
-	font-size: 55px;
+	font-size: 30px;
 	color: rgb(64,66,62);
-	font-weight: bold;
-
 }
 
-.why-logo1 img{
-	margin-top: 60px;
-	margin-left: 35%;
-	width: 450px;
-	height: 450px;
-}
-.why-tittle-container{
-	margin-top: 60px;
-	padding-right: 10%;
-	text-align: justify;
+.why-container{
+	margin-bottom: 50px; 
 }
 
-.why-tittle{
+.why-about{
+	margin-bottom: 20px;
+}
+
+.why-container h1{
 	font-family: 'Pacifico', cursive;
-	font-weight: bold;
 	font-size: 30px;
 }
 
+.why-mid-tittle{
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+}
 
+.bottom-card{
+	overflow: hidden;
+	position: relative;
+}
+
+.card-container{
+ 	height: 200px;
+ 	overflow: hidden;
+ 	margin-bottom: 20px;
+}
+
+.bottom-card img{
+	transition: all 0.3s;
+}
+
+.bottom-card img:hover{
+	transform: scale(1.1)
+}
+
+.bottom-card h1{
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.bottom-card p span{
+	margin-bottom: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.bottom-card span:hover{
+	color: #03ad23;
+	/*font-family: 'Poppins', sans-serif;*/
+}
+
+.bottom-card a{
+	text-decoration: none;
+	color: #000;
+}
+
+.picture-container{
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+.picture-container img{
+	margin: 0 auto;
+	display: block;
+}
+
+.education-title h5{
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+}

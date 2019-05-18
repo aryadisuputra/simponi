@@ -18,6 +18,18 @@ class LandingController
         ];
 	    return view('landing/whysimponi', $data);
     }
+    function kontak(){
+    	$data = [
+    		'title' => 'Kontak Kami'
+    	];
+    	return view('landing/kontakkami', $data);
+    }
+    function edukasi(){
+    	$data = [
+    		'title' => 'edukasi'	
+    	];
+    	return view('landing/edukasi', $data);
+    }
 
 
 
