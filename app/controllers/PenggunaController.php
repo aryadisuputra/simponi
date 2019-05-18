@@ -15,7 +15,6 @@ class PenggunaController
             'query' => [
                 'sql' => 'SELECT * FROM akun'
             ],
-            'max' => 1
         ]);
         $tabel->addRow('No', function ($data, $index){
                 return $index+1;
@@ -82,6 +81,9 @@ class PenggunaController
                 'required' => true
             ],
         ];
+
+        print_r(Input::file('foto')->upload('public/uploads'));
+        die();
 
         $valid = new Validation($config);
 
