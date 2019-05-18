@@ -21,6 +21,7 @@ Yang ini routes default
 $routes['default'] = 'LandingController@index';
 $routes['why-simponi'] = 'LandingController@whysimponi';
 $routes['contact-us'] = 'LandingController@kontak';
+$routes['edukasi'] = 'LandingController@edukasi';
 
 // dashboard
 $routes['control-panel'] = 'DashboardController@index';
@@ -32,6 +33,9 @@ $routes['control-panel/edukasi'] = 'EdukasiController@index';
 $routes['control-panel/pengguna'] = 'PenggunaController@index';
 
 $routes['control-panel/kategori-edukasi'] = 'KategoriEdukasiController@index';
+$routes['control-panel/kategori-edukasi/create'] = 'KategoriEdukasiController@create';
+$routes['control-panel/kategori-edukasi/add'] = 'KategoriEdukasiController@add';
+
 $routes['control-panel/kategori-produk'] = 'KategoriProdukController@index';
 $routes['control-panel/produk'] = 'ProdukController@index';
 
