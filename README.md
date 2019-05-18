@@ -25,11 +25,12 @@ upload file = Image1.png
 $file = Input::file('foto');
 $file->getName(); // Image1
 $file->getExtension(); // png
-$file->upload('path/to/upload')
+$file->upload('path/to/upload'); // path/to/upload/Image1.png
 ```
 
 To change name file
 ```php
+$new_name = 'Myimage';
 $file = Input::file('foto');
-$file->upload('path/to/upload', $new_name)
+$file->upload('path/to/upload', $new_name); // path/to/upload/Myimage.png
 ```
