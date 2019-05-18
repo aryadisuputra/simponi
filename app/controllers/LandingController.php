@@ -8,11 +8,20 @@ class LandingController
 		$this->akun = model('akun');
 
 	}
-	public function index(){	
+	function index(){
 		return view('landing/index');
 	}
 
-	public function login(){
+	function whysimponi(){
+	    $data = [
+	        'title' => 'Kenapa milih simponi. ?'
+        ];
+	    return view('landing/whysimponi', $data);
+    }
+
+
+
+	function login(){
 		checkIfLogin();
 
 		$data = [
@@ -22,7 +31,7 @@ class LandingController
 		return view('admin/login', $data);
 	}
 
-	public function doLogin(){
+	function doLogin(){
 		checkIfLogin();
 		
 		$user = Input::post('username');

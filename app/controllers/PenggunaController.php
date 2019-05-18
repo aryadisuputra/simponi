@@ -3,6 +3,7 @@
 class PenggunaController
 {
     private $akun;
+
     function __construct()
     {
         checkIfNotLogin();

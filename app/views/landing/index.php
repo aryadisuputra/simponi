@@ -1,4 +1,4 @@
-<?php view('partial/header') ?>
+<?php view('partial/header', $data) ?>
 <section id="hero" class="no-pad">
 	<a href="#" class="btn btn-primary btn-sign-up content-center">lihat cara kerja</a>
 </section>
@@ -45,7 +45,7 @@
 </section>
 
 <section id="footer">
-	Copyright ®2019
+    <center style="color: #ffffff">simponi. dibuat dengan <span style="color: #ff7066">❤</span> oleh kelompok 5</center>
 </section>
 
 <?php view('partial/footer') ?>
