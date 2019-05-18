@@ -196,3 +196,20 @@ section{
 	text-decoration: none;
 	color: #000;
 }
+
+.picture-container{
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+.picture-container img{
+	margin: 0 auto;
+	display: block;
+}
+
+.education-title h5{
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+}

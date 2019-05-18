@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
-				<a href="#">
+				<a href="<?php echo base_url('edukasi') ?>">
 					<div class="feature-card">
 						<!-- <h3 class="feature-card-title">belajar</h3> -->
 						<img src="<?php echo base_url('img/belajar.jpg') ?>" style="img-fluid" alt="">
