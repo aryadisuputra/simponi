@@ -24,6 +24,12 @@ class LandingController
     	];
     	return view('landing/kontakkami', $data);
     }
+    function blog(){
+    	$data = [
+    		'title' => 'blog'
+    	];
+    	return view('landing/blog', $data);
+    }
     function edukasi(){
     	$data = [
     		'title' => 'edukasi'	
