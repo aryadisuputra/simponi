@@ -46,7 +46,7 @@ class LandingController
 			'title' => 'Login',
 			'panel' => false
 		];
-		return view('admin/login', $data);
+		return view('landing/login', $data);
 	}
 
 	function doLogin(){
@@ -80,4 +80,15 @@ class LandingController
 			redirect('login');
 		}
 	}
+
+	function register(){
+        checkIfLogin();
+
+        $data = [
+            'title' => 'Register',
+            'panel' => false
+        ];
+
+        return view('landing/register', $data);
+    }
 }

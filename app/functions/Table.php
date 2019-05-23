@@ -124,7 +124,7 @@ class Table{
     function run(){
         if($this->runQuery()){
             if(count($this->search) > 0) {
-                $this->table .= '<div class="input-group input-group-sm" style="width: 150px;margin-bottom: 15px;"><form method="get" style="display: inline-block"><input type="hidden" name="page" value="'.$this->page.'"><input type="text" name="search" class="form-control pull-right" placeholder="Search"><div class="input-group-btn" style="position: absolute;right:36px;top: 1px;font-size: 0;white-space: nowrap;"><button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button></div></form></div>';
+                $this->table .= '<div class="input-group input-group-sm" style="width: 150px;margin-bottom: 15px;"><form method="get" style="display: inline-block"><input type="text" name="search" class="form-control pull-right" placeholder="Search"><div class="input-group-btn" style="position: absolute;right:36px;top: 1px;font-size: 0;white-space: nowrap;"><button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button></div></form></div>';
             }
             $this->table .= '<table class="table">';
             $this->table .= '<thead>';

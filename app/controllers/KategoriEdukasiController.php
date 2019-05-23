@@ -1,8 +1,9 @@
 <?php
 class KategoriEdukasiController{
-
+	private $KategoriPembelajaran;
 	function __construct(){
 		checkIfNotLogin();
+		$this->KategoriPembelajaran = model('KategoriPembelajaran');
 	}
 
 	public function index(){
@@ -19,7 +20,7 @@ class KategoriEdukasiController{
 		->addRow('Deskripsi','deskripsi')
 		->addRow('Icon','icon')
 		->addRow('Aksi',function($data){
-			return '<a href="'.base_url('kategoriEdukasi/edit/'.$data['id']).'" class="btn btn-warning btn-xs">Edit</a>';
+			return '<a href="'.base_url('kategori-edukasi/edit/'.$data['id']).'" class="btn btn-warning btn-xs">Edit</a>';
 		})
 		->search([
 			'id',
@@ -30,7 +31,35 @@ class KategoriEdukasiController{
 				'tabel' => $tabel->run()
 		];
 
-		return view('admin/kategoriEdukasi/index',$data);
+		return view('admin/kategoriedukasi/index',$data);
+	}
+
+	function add(){
+        $data = [
+            'title' => 'Tambah Kategori Edukasi'
+        ];
+
+        return view('admin/kategoriedukasi/add', $data);
+    }
+	public function create(){
+		$config = [
+			'nama' => [
+				'required' => true
+			],
+			'deskripsi' => [
+				'required' => true
+			],
+		];
+
+		$valid = new Validation($config);
+		if($valid->run()){
+            $this->KategoriPembelajaran->tambah();
+
+            redirect('control-panel/kategori-edukasi/add');
+        }else{
+            msg($valid->getErrors(), 'danger');
+            redirect('control-panel/kategori-edukasi/add');
+        }
 	}
 }
 ?>
