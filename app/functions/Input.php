@@ -50,7 +50,7 @@ class Input
 		}
 
 		if(move_uploaded_file($this->file['tmp_name'], $new_path)){
-    		return $new_path;
+    		return ltrim($path, '/').'/'.(empty($new_file) ? $this->file['name'] : $new_file.$this->getExtension);
     	}else{
     		return false;
     	}

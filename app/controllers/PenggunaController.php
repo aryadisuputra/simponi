@@ -33,7 +33,13 @@ class PenggunaController
                 return '<label class="badge badge-info">'.$hak_akses.'</label>';
             })
             ->addRow('Aksi', function ($data){
-                return '<a href="'.base_url('pengguna/edit/'.$data['id']).'" class="btn btn-warning btn-xs">Edit</a>';
+                return '
+                    <a href="'.base_url('control-panel/pengguna/edit/'.$data['id']).'" class="btn btn-warning btn-xs">Edit</a>
+                    <form action="'.base_url('control-panel/pengguna/destroy').'" method="post" style="display: inline">
+                        <input type="hidden" name="id" value="'.$data['id'].'">
+                        <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm(\'Apakah yakin ingin melanjutkan aksi ini?\')">Hapus</button>
+                    </form>
+                ';
             })
             ->search([
                 'id',
@@ -82,9 +88,6 @@ class PenggunaController
             ],
         ];
 
-        print_r(Input::file('foto')->upload('public/uploads'));
-        die();
-
         $valid = new Validation($config);
 
         if($valid->run()){
@@ -94,6 +97,25 @@ class PenggunaController
         }else{
             msg($valid->getErrors(), 'danger');
             redirect('control-panel/pengguna/add');
+        }
+    }
+
+    function destroy(){
+        $config = [
+            'id' => [
+                'required' => true
+            ]
+        ];
+
+        $valid = new Validation($config);
+
+        if($valid->run()){
+            $this->akun->hapus();
+
+            redirect('control-panel/pengguna');
+        }else{
+            msg($valid->getErrors(), 'danger');
+            redirect('control-panel/pengguna');
         }
     }
 
