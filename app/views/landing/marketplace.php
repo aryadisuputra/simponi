@@ -1,4 +1,10 @@
 <?php view('partial/header', $data) ?>
+<link href="<?php echo base_url('plugins/fancybox/fancybox.min.css') ?>" type="text/css" rel="stylesheet">
+<link href="<?php echo base_url('plugins/owlcarousel/assets/owl.carousel.min.css') ?>" rel="stylesheet">
+<link href="<?php echo base_url('plugins/owlcarousel/assets/owl.theme.default.css') ?>" rel="stylesheet">
+<link href="<?php echo base_url('css/ui.css') ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url('css/responsive.css') ?>" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
 
 <section class="header-main shadow-sm">
 	<div class="container">
@@ -345,3 +351,5 @@
 	<center style="color: #ffffff">simponi. dibuat dengan <span style="color: #ff7066">❤</span> oleh kelompok 5</center>
 </section>
 <?php view('partial/footer') ?>
+<script src="<?php echo base_url('plugins/fancybox/fancybox.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('plugins/owlcarousel/owl.carousel.min.js') ?>"></script>

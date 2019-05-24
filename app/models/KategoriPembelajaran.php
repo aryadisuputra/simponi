@@ -1,17 +1,5 @@
 <?php
 Class KategoriPembelajaran{
-	function login($user, $pass){
-		try {
-			$sql = "SELECT * FROM akun WHERE username = ? AND password = ?";
-			$prep = DB::connection()->prepare($sql);
-			$prep->execute([$user, $pass]);
-			return $prep->rowCount();
-		} catch (PDOException $e) {
-			msg('Kesalahan : '.$e->getMessage(), 'danger');
-			redirect('login');
-		}
-	}
-
 	function tambah(){
 	    try{
             $nama = Input::post('nama');
@@ -30,6 +18,26 @@ Class KategoriPembelajaran{
         }catch (PDOException $e){
             msg('Kesalahan : '.$e->getMessage(), 'danger');
             redirect('control-panel/kategoriedukasi/add');
+        }
+    }
+
+    function getKategori(){
+        try {
+            $sql = "SELECT 
+                    * 
+                    FROM 
+                    kategori_pembelajaran";
+            $prep = DB::connection()->prepare($sql);
+            $prep->execute();
+
+            if($prep->rowCount()){
+                return $prep->fetchAll(PDO::FETCH_OBJ);
+            }
+
+            return false;
+
+        } catch (PDOException $e) {
+            return false;
         }
     }
 }
