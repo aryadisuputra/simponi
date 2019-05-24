@@ -28,17 +28,21 @@ $routes['control-panel'] = 'DashboardController@index';
 
 // edukasi
 $routes['control-panel/edukasi'] = 'EdukasiController@index';
+$routes['control-panel/edukasi/add'] = 'EdukasiController@add';
+$routes['control-panel/edukasi/create'] = 'EdukasiController@create';
 
 // pengguna
-$routes['control-panel/pengguna'] = 'PenggunaController@index';
 
 $routes['control-panel/kategori-edukasi'] = 'KategoriEdukasiController@index';
 $routes['control-panel/kategori-edukasi/create'] = 'KategoriEdukasiController@create';
 $routes['control-panel/kategori-edukasi/add'] = 'KategoriEdukasiController@add';
-
+$routes['control-panel/kategori-edukasi/edit/:id'] = 'KategoriEdukasiController@edit';
+$routes['control-panel/kategori-edukasi/update'] = 'KategoriEdukasiController@update';
 $routes['control-panel/kategori-produk'] = 'KategoriProdukController@index';
+
 $routes['control-panel/produk'] = 'ProdukController@index';
 
+$routes['control-panel/pengguna'] = 'PenggunaController@index';
 $routes['control-panel/pengguna/add'] = 'PenggunaController@add';
 $routes['control-panel/pengguna/create'] = 'PenggunaController@create';
 $routes['control-panel/pengguna/edit/:id'] = 'PenggunaController@edit';

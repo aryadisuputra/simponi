@@ -34,8 +34,8 @@ class PenggunaController
             })
             ->addRow('Aksi', function ($data){
                 return '
-                    <a href="'.base_url('control-panel/pengguna/edit/'.$data['id']).'" class="btn btn-warning btn-xs">Edit</a>
-                    <form action="'.base_url('control-panel/pengguna/destroy').'" method="post" style="display: inline">
+                    <a href="'.base_url('control-panel/edukasi/edit/'.$data['username']).'" class="btn btn-warning btn-xs">Edit</a>
+                    <form action="'.base_url('control-panel/edukasi/destroy').'" method="post" style="display: inline">
                         <input type="hidden" name="id" value="'.$data['id'].'">
                         <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm(\'Apakah yakin ingin melanjutkan aksi ini?\')">Hapus</button>
                     </form>
@@ -98,6 +98,21 @@ class PenggunaController
             msg($valid->getErrors(), 'danger');
             redirect('control-panel/pengguna/add');
         }
+    }
+
+    function edit($id){
+        $akun = $this->akun->getById($id);
+
+        if($akun === false){
+            abort(404);
+        }
+
+        $data = [
+            'title' => 'Edit Pengguna '.$akun->username,
+            'item'  => $akun
+        ];
+
+        return view('admin/pengguna/edit', $data);
     }
 
     function destroy(){
