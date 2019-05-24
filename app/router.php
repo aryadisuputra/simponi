@@ -22,6 +22,7 @@ $routes['default'] = 'LandingController@index';
 $routes['why-simponi'] = 'LandingController@whysimponi';
 $routes['contact-us'] = 'LandingController@kontak';
 $routes['edukasi'] = 'LandingController@edukasi';
+$routes['marketplace'] = 'LandingController@marketplace';
 
 // dashboard
 $routes['control-panel'] = 'DashboardController@index';

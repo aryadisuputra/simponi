@@ -30,6 +30,12 @@ class LandingController
     	];
     	return view('landing/edukasi', $data);
     }
+    function marketplace(){
+    	$data = [
+    		'tittle' => 'marketplace'
+    	];
+    	return view('landing/marketplace',$data);
+    }
 
 
 
