@@ -16,7 +16,6 @@ h1,h2,h3,h4,h5,h6{
 	padding: 20px 40px;
 	
 }
-
 .navbar-brand img{
 	width: 60px;
 }
@@ -24,7 +23,6 @@ h1,h2,h3,h4,h5,h6{
 .navbar-nav li{
 	padding: 0 10px;
 }
-
 #hero{
 	height: 450px;
 	background-image: url("../img/hero3.jpg");
@@ -212,4 +210,21 @@ section{
 	text-align: center;
 	font-family: 'Pacifico', cursive;
 	font-size: 30px;
+}
+.fontt {
+	color: #67696b;
+}
+.kotak {
+	border-bottom: 1px solid #D3D3D3;
+	border-radius: 1%;
+}
+.kotakb {
+	border-bottom: 3px solid #D3D3D3;
+	border-radius: 1%;
+}
+.blog-card-content {
+	border-bottom: 1px solid #D3D3D3;
+}
+.contain, button {
+	margin-top: 0.2rem;
 }

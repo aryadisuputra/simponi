@@ -21,6 +21,7 @@ Yang ini routes default
 $routes['default'] = 'LandingController@index';
 $routes['why-simponi'] = 'LandingController@whysimponi';
 $routes['contact-us'] = 'LandingController@kontak';
+$routes['blog'] = 'LandingController@blog';
 $routes['edukasi'] = 'LandingController@edukasi';
 $routes['marketplace'] = 'LandingController@marketplace';
 
@@ -42,10 +43,12 @@ $routes['control-panel/produk'] = 'ProdukController@index';
 
 $routes['control-panel/pengguna/add'] = 'PenggunaController@add';
 $routes['control-panel/pengguna/create'] = 'PenggunaController@create';
-
+$routes['control-panel/pengguna/edit/:id'] = 'PenggunaController@edit';
+$routes['control-panel/pengguna/destroy'] = 'PenggunaController@destroy';
 
 // autentikasi
 $routes['login'] = 'LandingController@login';
 $routes['dologin'] = 'LandingController@doLogin';
+$routes['register'] = 'LandingController@register';
 $routes['logout'] = 'DashboardController@logout';
 
