@@ -24,11 +24,23 @@ class LandingController
     	];
     	return view('landing/kontakkami', $data);
     }
+    function blog(){
+    	$data = [
+    		'title' => 'blog'
+    	];
+    	return view('landing/blog', $data);
+    }
     function edukasi(){
     	$data = [
     		'title' => 'edukasi'	
     	];
     	return view('landing/edukasi', $data);
+    }
+    function marketplace(){
+    	$data = [
+    		'tittle' => 'marketplace'
+    	];
+    	return view('landing/marketplace',$data);
     }
 
 
