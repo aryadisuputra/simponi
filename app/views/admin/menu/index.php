@@ -14,10 +14,10 @@
                 <h1 class="box-title">List</h1>
             </div>
             <div class="box-body">
-                <a href="<?php echo base_url('control-panel') ?>" class="btn btn-info" style="margin-bottom: 25px;">Tambah</a>
-             <?php echo $tabel ?>
+                <a href="<?php echo base_url('control-panel/menu/add') ?>" class="btn btn-info" style="margin-bottom: 25px;">Tambah</a>
+                <?php echo $tabel ?>
             </div>
         </div>
-       
+        <!-- disini taruh kontennya anjing  -->
     </section>
 <?php view('admin/partial/footer', $data) ?>

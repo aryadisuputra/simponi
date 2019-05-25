@@ -33,3 +33,28 @@ $routes['control-panel'] = 'DashboardController@index';
 //menu
 $routes['control-panel/menu'] = 'MenuController@index';
 $routes['control-panel/menu/edit/:id'] = 'MenuController@edit';	
+$routes['control-panel/menu/create'] = 'MenuController@create';
+$routes['control-panel/menu/add'] = 'MenuController@add';
+$routes['control-panel/menu/update'] = 'MenuController@update';
+$routes['control-panel/menu'] = 'menuController@index';
+$routes['control-panel/menu/add'] = 'menuController@add';
+$routes['control-panel/menu/create'] = 'menuController@create';
+$routes['control-panel/menu/edit/:id'] = 'menuController@edit';
+$routes['control-panel/menu/destroy'] = 'menuController@destroy';
+
+
+//restaurant
+$routes['control-panel/restaurant'] = 'RestaurantController@index';
+$routes['control-panel/restaurant/edit/:id'] = 'RestaurantController@edit';
+
+//paket
+$routes['control-panel/paket'] = 'PaketController@index';
+$routes['control-panel/paket/edit/:id'] = 'PaketController@edit';
+
+//customers
+$routes['control-panel/customer'] = 'CustomerController@index';
+$routes['control-panel/customer/edit/:id'] = 'CustomerController@edit';
+
+//mitra
+$routes['control-panel/mitra'] = 'MitraController@index';
+$routes['control-panel/mitra/edit/:id'] = 'MitrarController@edit';

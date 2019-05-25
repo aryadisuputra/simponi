@@ -14,22 +14,23 @@
 			<ul class="treeview-menu">
             	<li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === '#') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'#') ?>"><i class="fa fa-circle-o"></i> <span>Slider</span></a></li>
 		        <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === '#') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'#') ?>"><i class="fa fa-circle-o"></i> <span>Kategori</span></a></li>
-                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === '#') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'#') ?>"><i class="fa fa-circle-o"></i> <span>Meja</span></a></li>
-                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'menu') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'menu') ?>"><i class="fa fa-tag"></i> <span>Menu</span></a></li>
-                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === '#') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'#') ?>"><i class="fa fa-circle-o"></i> <span>Restaurant</span></a></li>
+                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'paket') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'paket') ?>"><i class="fa fa-circle-o"></i> <span>Paket</span></a></li>
+                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'menu') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'menu') ?>"><i class="fa fa-circle-o"></i> <span>Menu</span></a></li>
+                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'restaurant') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'restaurant') ?>"><i class="fa fa-circle-o"></i> <span>Restaurant</span></a></li>
+               
          	</ul>
 		</li>
         <li class="treeview <?php echo (Input::url(0) === 'control-panel' && (Input::url(1) === 'kategori-edukasi' || Input::url(1) === 'kategori-produk')) ? 'active menu-open' : '' ?>">
             <a href="#">
                 <i class="fa fa-tags"></i>
-                <span>Kategori</span>
+                <span>Users</span>
                 <span class="pull-right-container">
 					<i class="fa fa-angle-left pull-right"></i>
 				</span>
             </a>
             <ul class="treeview-menu">
-                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'kategori-edukasi') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'kategori-edukasi') ?>"><i class="fa fa-tag"></i> <span>Kategori Edukasi</span></a></li>
-                <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'kategori-produk') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'kategori-produk') ?>"><i class="fa fa-tag"></i> <span>Kategori Produk</span></a></li>
+                 <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'customer') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'customer') ?>"><i class="fa fa-circle-o"></i> <span>Customers</span></a></li>
+                 <li <?php echo (Input::url(0) === 'control-panel' && Input::url(1) === 'mitra') ? 'class="active"' : '' ?>><a href="<?php echo base_url($url.'mitra') ?>"><i class="fa fa-circle-o"></i> <span>Mitra Resto</span></a></li>
             </ul>
         </li>
 		

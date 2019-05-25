@@ -33,7 +33,72 @@ class MenuController{
 
 		return view('admin/menu/index',$data);
 	}
+	function add(){
+        $data = [
+            'title' => 'Tambah Menu'
+        ];
 
+        return view('admin/menu/add', $data);
+    }
+
+    function create(){
+         $config = [
+            'nama_menu' => [
+                'required' => true
+            ],
+            'jenis_menu' => [
+                'required' => true
+            ],
+            'harga_menu' => [
+                'required' => true
+            ],
+        ];
+
+        $valid = new Validation($config);
+
+        if($valid->run()){
+            $this->Menu->tambah();
+
+            redirect('control-panel/menu/add');
+        }else{
+            msg($valid->getErrors(), 'danger');
+            redirect('control-panel/menu/add');
+        }
+    }
+
+    function edit($id){
+        $menu = $this->menu->getById($id);
+
+        if($menu === false){
+            abort(404);
+        }
+
+        $data = [
+            'title' => 'Edit Menu '.$menu->jenis_menu,
+            'item'  => $menu
+        ];
+
+        return view('admin/menu/edit', $data);
+    }
+
+    function destroy(){
+        $config = [
+            'id_menu' => [
+                'required' => true
+            ]
+        ];
+
+        $valid = new Validation($config);
+
+        if($valid->run()){
+            $this->menu->hapus();
+
+            redirect('control-panel/menu');
+        }else{
+            msg($valid->getErrors(), 'danger');
+            redirect('control-panel/menu');
+        }
+    }
 	
 	
 }

@@ -1,32 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Register</title>
-	<link rel="stylesheet" href="css/register.css" type="text/css">
-</head>
-<body>
-<h3>Register</h3>
+<?php view('admin/partial/header', $data) ?>
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url('img/logo.png') ?>" style="max-width: 50px" alt=""></a>
+    </div>
+    <div>
+          <?php echo Session::flash('error'); ?>
+        </div>
+    
+    <div class="login-box-body">
+    
+      <p class="login-box-msg">Register untuk mendapatkan akun</p>
 
-<form action="" method="">
-  <div class="container">
-    <label><b>Nama Lengkap</b></label>
-    <input type="text" placeholder="Masukkan Nama Lengkap" id="uname" required>
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Masukkan Username" id="uname" required>
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Masukkan Password" id="psw" name="" required>
-    <label><b>No Telepon</b></label>
-    <input type="text" placeholder="Masukkan No Telepon" id="uname" required>
-    <label><b>Alamat</b></label>
-    <input type="password" placeholder="Masukkan Alamat" id="uname" name="" required>
-
-    <button type="submit">Daftar</button>
+      <form action="<?php echo base_url('dologin') ?>" method="post">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control" placeholder="Username" name="username">
+          <span class="form-control-feedback"><i class="fa fa-user"></i></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" placeholder="Password" name="password">
+          <span class="form-control-feedback"><i class="fa fa-lock"></i></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <label>
+                <input type="checkbox"> Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.login-box-body -->
+    <div class="text-center" style="display: block;margin-top: 10px;">
+      <a href="<?php echo base_url('register') ?>">Belum punya akun? Silahkan daftar disini!</a>
+    </div>
   </div>
-
-  <div class="container">
-    <span class="masuk">Punya akun? <a href="login.html">Masuk</a></span>
-  </div>
-</form>
-
-</body>
-</html>
+  <!-- /.login-box -->
+<?php view('admin/partial/footer', $data) ?>
+<script>
+  $(function () {
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%' /* optional */
+  });
+  });
+</script>

@@ -1,4 +1,4 @@
-<header class="main-header">
+<header class="main-header"	>
 	<a href="<?php echo base_url('control-panel') ?>" class="logo">
 	  	<span class="logo-mini"><b>Retro</b>.</span>
 	  	<span class="logo-lg">Re<b>tro</b>.</span>
