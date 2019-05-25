@@ -1,10 +1,10 @@
 <header class="main-header">
 	<a href="<?php echo base_url('control-panel') ?>" class="logo">
-	  	<span class="logo-mini"><b>poni</b>.</span>
-	  	<span class="logo-lg">sim<b>poni</b>.</span>
+	  	<span class="logo-mini"><b>Retro</b>.</span>
+	  	<span class="logo-lg">Re<b>tro</b>.</span>
 	</a>
 
-	<nav class="navbar navbar-static-top" role="navigation">
+	<nav class="navbar navbar-static-top" role="navigation" >
 	  	<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
 			<span class="sr-only">Toggle navigation</span>
 	  	</a>
@@ -33,13 +33,13 @@
 			  	<li class="dropdown user user-menu">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				  		<i class="fa fa-user"></i>
-				  		<span class="hidden-xs">Agus Wahyu</span>
+				  		<span class="hidden-xs">Admin</span>
 					</a>
 					<ul class="dropdown-menu">
 				  		<li class="user-header">
 							<img src="<?php echo base_url('dist/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
 							<p>
-								Agus Wahyu
+								Admin
 								<small>Admin</small>
 							</p>
 				  		</li>

@@ -15,44 +15,21 @@ Yang ini routes default
 	$routes['default'] = 'Landing@index';
 
 */
-
-
-
 $routes['default'] = 'LandingController@index';
-$routes['why-simponi'] = 'LandingController@whysimponi';
-$routes['contact-us'] = 'LandingController@kontak';
-$routes['blog'] = 'LandingController@blog';
-$routes['edukasi'] = 'LandingController@edukasi';
-$routes['marketplace'] = 'LandingController@marketplace';
-
-// dashboard
-$routes['control-panel'] = 'DashboardController@index';
-
-// edukasi
-$routes['control-panel/edukasi'] = 'EdukasiController@index';
-$routes['control-panel/edukasi/add'] = 'EdukasiController@add';
-$routes['control-panel/edukasi/create'] = 'EdukasiController@create';
-
-// pengguna
-
-$routes['control-panel/kategori-edukasi'] = 'KategoriEdukasiController@index';
-$routes['control-panel/kategori-edukasi/create'] = 'KategoriEdukasiController@create';
-$routes['control-panel/kategori-edukasi/add'] = 'KategoriEdukasiController@add';
-$routes['control-panel/kategori-edukasi/edit/:id'] = 'KategoriEdukasiController@edit';
-$routes['control-panel/kategori-edukasi/update'] = 'KategoriEdukasiController@update';
-$routes['control-panel/kategori-produk'] = 'KategoriProdukController@index';
-
-$routes['control-panel/produk'] = 'ProdukController@index';
-
-$routes['control-panel/pengguna'] = 'PenggunaController@index';
-$routes['control-panel/pengguna/add'] = 'PenggunaController@add';
-$routes['control-panel/pengguna/create'] = 'PenggunaController@create';
-$routes['control-panel/pengguna/edit/:id'] = 'PenggunaController@edit';
-$routes['control-panel/pengguna/destroy'] = 'PenggunaController@destroy';
-
-// autentikasi
+$routes['home'] = 'LandingController@home';
+$routes['pesan'] = 'LandingController@pesan';
+$routes['reservasi'] = 'LandingController@reservasi';
+$routes['konfreservasi'] = 'LandingController@konfreservasi';
+$routes['konfpesan'] = 'LandingController@konfpesan';
 $routes['login'] = 'LandingController@login';
-$routes['dologin'] = 'LandingController@doLogin';
+$routes['dologin'] = 'LandingController@dologin';
 $routes['register'] = 'LandingController@register';
 $routes['logout'] = 'DashboardController@logout';
+$routes['control-panel'] = 'DashboardController@index';
 
+// dashboard
+
+
+//menu
+$routes['control-panel/menu'] = 'MenuController@index';
+$routes['control-panel/menu/edit/:id'] = 'MenuController@edit';	

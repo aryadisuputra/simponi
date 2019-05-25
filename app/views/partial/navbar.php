@@ -1,31 +1,29 @@
-<section id="navbar" class="no-pad">
-	<nav id="sticky-navbar" class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
-		<a class="navbar-brand" href="<?php echo base_url()?>"><img src="img/logo.png" alt="logo simponi."></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="<?php echo base_url()?>">beranda</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">cara kerja</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('why-simponi') ?>">kenapa simponi?</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">produk kami</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('blog') ?>">blog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('contact-us') ?>">kontak kami</a>
-				</li>
-			</ul>
+		<div class="nav-container"><nav>
+		
+		        <div class="nav-bar text-center">
+		            <div class="col-md-2 col-md-push-5 col-sm-12 text-center">
+		                <a href="<?php echo base_url('default') ?>">
+		                    <div class="vnu"><img alt="logo" class="image-xxs" src="img/logo.png"></div>
+		                </a>
+		            </div>
+		            <div class="col-sm-12 col-md-5 col-md-pull-2 overflow-hidden-xs">
+		                <ul class="menu inline-block pull-right">
+		                    <li><a href="<?php echo base_url('default') ?>">HOME</a></li>
+		                    <li><a href="#">HISTORY&nbsp;</a>
+		                    </li>
+		                </ul>
+		            </div>
+		            <div class="col-sm-12 col-md-5 pb-xs-24">
+		                <ul class="menu">
+		                    <li><a href="<?php echo base_url('reservasi') ?>">&nbsp;RESERVATION</a></li>
+		                    <li><a href="#">CONTACT</a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		
+		        <div class="module widget-handle mobile-toggle right visible-sm visible-xs absolute-xs">
+		            <i class="ti-menu"></i>
+		        </div>
+		    </nav>
 		</div>
-	</nav>
-</section>

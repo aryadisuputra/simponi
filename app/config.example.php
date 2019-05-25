@@ -4,5 +4,5 @@ $config = [
 	'host' => 'localhost',
 	'user' => 'root',
 	'pass' => '',
-	'dbname' => 'simponi'
+	'dbname' => 'retro'
 ];

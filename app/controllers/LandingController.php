@@ -8,40 +8,57 @@ class LandingController
 		$this->akun = model('akun');
 
 	}
+
 	function index(){
 		return view('landing/index');
 	}
 
-	function whysimponi(){
-	    $data = [
-	        'title' => 'Kenapa milih simponi. ?'
-        ];
-	    return view('landing/whysimponi', $data);
-    }
-    function kontak(){
-    	$data = [
-    		'title' => 'Kontak Kami'
-    	];
-    	return view('landing/kontakkami', $data);
-    }
-    function blog(){
-    	$data = [
-    		'title' => 'blog'
-    	];
-    	return view('landing/blog', $data);
-    }
-    function edukasi(){
-    	$data = [
-    		'title' => 'edukasi'	
-    	];
-    	return view('landing/edukasi', $data);
-    }
-    function marketplace(){
-    	$data = [
-    		'tittle' => 'marketplace'
-    	];
-    	return view('landing/marketplace',$data);
-    }
+	function home(){
+		return view('landing/home');
+	}
+	function pesan(){
+		return view('landing/pesan');
+	}
+	function reservasi(){
+		return view('landing/reservasi');
+	}
+	function konfreservasi(){
+		return view('landing/konfreservasi');
+	}
+	function konfpesan(){
+		return view('landing/konfpesan');
+	}
+
+	// function whysimponi(){
+	//     $data = [
+	//         'title' => 'Kenapa milih simponi. ?'
+ //        ];
+	//     return view('landing/whysimponi', $data);
+ //    }
+ //    function kontak(){
+ //    	$data = [
+ //    		'title' => 'Kontak Kami'
+ //    	];
+ //    	return view('landing/kontakkami', $data);
+ //    }
+ //    function blog(){
+ //    	$data = [
+ //    		'title' => 'blog'
+ //    	];
+ //    	return view('landing/blog', $data);
+ //    }
+ //    function edukasi(){
+ //    	$data = [
+ //    		'title' => 'edukasi'	
+ //    	];
+ //    	return view('landing/edukasi', $data);
+ //    }
+ //    function marketplace(){
+ //    	$data = [
+ //    		'tittle' => 'marketplace'
+ //    	];
+ //    	return view('landing/marketplace',$data);
+ //    }
 
 
 
